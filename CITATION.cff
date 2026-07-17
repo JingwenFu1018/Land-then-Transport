@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the accepted paper below."
+message: "If you use this software, please cite the published paper below."
 title: "Land-then-Transport"
 type: software
 authors:
@@ -17,7 +17,7 @@ license: "CC-BY-NC-SA-4.0"
 version: 0.1.0
 preferred-citation:
   type: article
-  title: "Land-then-transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission"
+  title: "Land-Then-Transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission"
   authors:
     - family-names: Fu
       given-names: Jingwen
@@ -28,5 +28,8 @@ preferred-citation:
     - family-names: Kim
       given-names: Dong In
   journal: "IEEE Transactions on Wireless Communications"
+  volume: "25"
+  start: "19757"
+  end: "19772"
   year: 2026
-  notes: "Accepted for publication; arXiv:2601.07512"
+  doi: "10.1109/TWC.2026.3710439"

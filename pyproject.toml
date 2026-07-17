@@ -4,7 +4,13 @@ version = "0.1.0"
 description = "Flow matching-based generative decoding for wireless image transmission"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { file = "LICENSE" }
+license = "CC-BY-NC-SA-4.0"
+license-files = [
+    "LICENSE",
+    "NOTICE",
+    "third_party/LICENSE-guided-diffusion",
+    "third_party/LICENSE-meta-flow-matching",
+]
 authors = [
     { name = "Jingwen Fu" },
     { name = "Ming Xiao" },
@@ -24,6 +30,12 @@ dependencies = [
     "tqdm>=4.66",
 ]
 
+[project.urls]
+Homepage = "https://github.com/JingwenFu1018/Land-then-Transport"
+Repository = "https://github.com/JingwenFu1018/Land-then-Transport"
+Paper = "https://doi.org/10.1109/TWC.2026.3710439"
+Preprint = "https://arxiv.org/abs/2601.07512"
+
 [project.optional-dependencies]
 metrics = [
     "pytorch-msssim>=1.0",
@@ -33,12 +45,16 @@ tracking = [
     "wandb>=0.18",
 ]
 dev = [
+    "build>=1.2",
     "ruff>=0.9",
 ]
 
 [build-system]
-requires = ["setuptools>=69"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["train", "evaluate"]
 
 [tool.setuptools.packages.find]
 where = ["."]

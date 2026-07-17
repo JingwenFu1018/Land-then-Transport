@@ -4,9 +4,11 @@ Land-then-Transport
 This repository implements the method described in:
 
   Jingwen Fu, Ming Xiao, Mikael Skoglund, and Dong In Kim,
-  "Land-then-transport: A Flow Matching-Based Generative Decoder for
-  Wireless Image Transmission," accepted for publication in
-  IEEE Transactions on Wireless Communications, 2026.
+  "Land-Then-Transport: A Flow Matching-Based Generative Decoder for
+  Wireless Image Transmission," IEEE Transactions on Wireless
+  Communications, vol. 25, pp. 19757-19772, 2026.
+  DOI: 10.1109/TWC.2026.3710439
+  IEEE document: 11604027
 
 Upstream flow-matching implementation
 -------------------------------------

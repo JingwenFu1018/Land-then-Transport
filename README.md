@@ -6,26 +6,24 @@ Official code release for:
 
 Jingwen Fu, Ming Xiao, Mikael Skoglund, and Dong In Kim
 
-The paper has been accepted for publication in **IEEE Transactions on Wireless Communications**. The formal IEEE DOI, volume, issue, and page numbers are not available yet. The current manuscript is available as [arXiv:2601.07512](https://arxiv.org/abs/2601.07512).
+The paper is published in **IEEE Transactions on Wireless Communications**, vol. 25, pp. 19757–19772, 2026 ([DOI: 10.1109/TWC.2026.3710439](https://doi.org/10.1109/TWC.2026.3710439), IEEE document 11604027). A preprint is available as [arXiv:2601.07512](https://arxiv.org/abs/2601.07512).
 
 ## Overview
 
 Land-then-Transport (LTT) treats a received wireless observation as a point on a continuous-time flow at a channel-dependent landing time. A conditional flow matching model then transports that observation toward the clean image distribution using a deterministic ODE decoder.
 
-This public version contains the core implementation for:
+This public version supports the core AWGN workflow:
 
 - AWGN channels;
-- Rayleigh fading with MMSE pre-equalization;
-- correlated and uncorrelated 2×2 MIMO channels;
 - conditional flow matching training;
 - PSNR, MS-SSIM, and LPIPS evaluation.
 
-Model weights and large experiment outputs are not included in this release.
+Rayleigh and MIMO research modules are retained in the source tree for reference, but they are not part of the currently supported public workflow. Model weights and large experiment outputs are not included in this release.
 
 ## Repository structure
 
 - `train.py`: conditional flow matching training.
-- `evaluate.py`: checkpoint evaluation over AWGN, Rayleigh, or 2×2 MIMO channels.
+- `evaluate.py`: checkpoint evaluation for the supported AWGN workflow.
 - `flow_matching/`: schedules, ODE solver, channel conversion, metrics, datasets, and UNet.
 - `ltt/config.py`: shared command-line configuration.
 - `ltt/checkpoint.py`: checkpoint saving and loading.
@@ -80,38 +78,35 @@ python train.py \
   --sigma_schedule sqrt
 ```
 
-The public training path learns the AWGN-aligned flow field reused by the supported channel models.
+The public training path learns the AWGN-aligned flow field.
 
 ## Evaluation
 
-Pass a locally trained checkpoint explicitly:
+No pretrained weights are distributed with this repository. Complete training first, then pass the generated checkpoint explicitly:
 
 ```bash
 python evaluate.py \
   --dataset mnist \
   --data_root ./data \
-  --checkpoint ./outputs/mnist/ckpt_best_e100-schedsqrt-chawgn-smax1.0000-lr1e-03.pth \
+  --checkpoint ./outputs/mnist/ckpt_e100-schedsqrt-chawgn-smax1.0000-lr1e-03.pth \
   --channel awgn \
   --test_snr_db_list "0,5,10,15" \
   --ode_steps 10
 ```
 
-Set `--channel rayleigh` or `--channel mimo` for the other supported channels. For correlated MIMO, set `--mimo_corr_rho` to a value satisfying `|rho| < 1`.
-
 ## Citation
 
-Until the final IEEE bibliographic record is available, please cite:
+Please cite the published article:
 
 ```bibtex
 @article{fu2026land,
-  title   = {Land-then-transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission},
+  title   = {Land-Then-Transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission},
   author  = {Fu, Jingwen and Xiao, Ming and Skoglund, Mikael and Kim, Dong In},
   journal = {IEEE Transactions on Wireless Communications},
+  volume  = {25},
+  pages   = {19757--19772},
   year    = {2026},
-  note    = {Accepted for publication; arXiv:2601.07512},
-  eprint  = {2601.07512},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG}
+  doi     = {10.1109/TWC.2026.3710439}
 }
 ```
 
