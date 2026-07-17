@@ -110,6 +110,10 @@ Please cite the published article:
 }
 ```
 
+## Development Note
+
+This public code release was curated and reorganized with assistance from Cursor's AI coding agent. The authors reviewed and approved the resulting repository structure, documentation, and code changes, and remain responsible for the released content.
+
 ## Acknowledgements
 
 We gratefully acknowledge [Keishi Ishihara's flow-matching implementation](https://github.com/keishihara/flow-matching), on which this repository is based. The ODE solver also adapts components from [Meta's flow_matching](https://github.com/facebookresearch/flow_matching), and the UNet implementation derives from [OpenAI guided-diffusion](https://github.com/openai/guided-diffusion).
