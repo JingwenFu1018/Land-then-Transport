@@ -112,7 +112,7 @@ Please cite the published article:
 
 ## Development Note
 
-This public code release was curated and reorganized with assistance from Cursor's AI coding agent. The authors reviewed and approved the resulting repository structure, documentation, and code changes, and remain responsible for the released content.
+This public code release was curated and reorganized with assistance from Cursor's AI coding agent.
 
 ## Acknowledgements
 
