@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accepted paper below."
+title: "Land-then-Transport"
+type: software
+authors:
+  - family-names: Fu
+    given-names: Jingwen
+  - family-names: Xiao
+    given-names: Ming
+  - family-names: Skoglund
+    given-names: Mikael
+  - family-names: Kim
+    given-names: Dong In
+repository-code: "https://github.com/JingwenFu1018/Land-then-Transport"
+url: "https://arxiv.org/abs/2601.07512"
+license: "CC-BY-NC-SA-4.0"
+version: 0.1.0
+preferred-citation:
+  type: article
+  title: "Land-then-transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission"
+  authors:
+    - family-names: Fu
+      given-names: Jingwen
+    - family-names: Xiao
+      given-names: Ming
+    - family-names: Skoglund
+      given-names: Mikael
+    - family-names: Kim
+      given-names: Dong In
+  journal: "IEEE Transactions on Wireless Communications"
+  year: 2026
+  notes: "Accepted for publication; arXiv:2601.07512"

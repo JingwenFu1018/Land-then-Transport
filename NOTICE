@@ -1,0 +1,48 @@
+Land-then-Transport
+===================
+
+This repository implements the method described in:
+
+  Jingwen Fu, Ming Xiao, Mikael Skoglund, and Dong In Kim,
+  "Land-then-transport: A Flow Matching-Based Generative Decoder for
+  Wireless Image Transmission," accepted for publication in
+  IEEE Transactions on Wireless Communications, 2026.
+
+Upstream flow-matching implementation
+-------------------------------------
+
+This project is based on and substantially modifies:
+
+  Keishi Ishihara, "Flow Matching in PyTorch"
+  https://github.com/keishihara/flow-matching
+
+The upstream project is distributed under CC BY-NC-SA 4.0. Its license
+is retained as the root LICENSE file. Modifications include wireless
+channel-aware schedules and decoding, AWGN/Rayleigh/MIMO processing,
+image-transmission training and evaluation, portable configuration,
+and checkpoint handling.
+
+Meta flow_matching
+------------------
+
+flow_matching/solver.py adapts components from:
+
+  Meta Platforms, Inc., flow_matching
+  https://github.com/facebookresearch/flow_matching
+
+The corresponding CC BY-NC 4.0 license is included at
+third_party/LICENSE-meta-flow-matching.
+
+OpenAI guided-diffusion
+-----------------------
+
+flow_matching/models/unet.py, nn.py, fp16_util.py, and logger.py derive
+from:
+
+  OpenAI, guided-diffusion
+  https://github.com/openai/guided-diffusion
+
+Copyright (c) 2021 OpenAI. The corresponding MIT license is included at
+third_party/LICENSE-guided-diffusion.
+
+No model weights or dataset contents are distributed by this repository.
