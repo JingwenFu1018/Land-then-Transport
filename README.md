@@ -6,7 +6,7 @@ Official code release for:
 
 Jingwen Fu, Ming Xiao, Mikael Skoglund, and Dong In Kim
 
-The paper is published in **IEEE Transactions on Wireless Communications**, vol. 25, pp. 19757–19772, 2026 ([DOI: 10.1109/TWC.2026.3710439](https://doi.org/10.1109/TWC.2026.3710439), IEEE document 11604027). A preprint is available as [arXiv:2601.07512](https://arxiv.org/abs/2601.07512).
+The paper is published in **IEEE Transactions on Wireless Communications**, vol. 25, pp. 19757–19772, 2026 ([DOI: 10.1109/TWC.2026.3710439](https://doi.org/10.1109/TWC.2026.3710439), IEEE document 11604027).
 
 ## Overview
 
